@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	// your code goes here
+	int test;
+	cin >> test;
+	
+	for(int t=0;t<test;t++){
+	    
+	
+	int h;
+	int m;
+	cin >>h>>m;
+	
+	int total = 0;
+	total = 24 * 60;
+	
+	int temp = h*60;
+	temp = temp+ m;
+	
+	int remaining = total - temp;
+	
+	cout<<remaining<<endl;
+	}
+}
