@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	// your code goes here
+	
+	long long n;
+	cin >> n;
+	long long answer;
+	
+	if(n%2 == 0){
+	    answer = n/2;
+	}else{
+	    n+=1;
+	    
+	    answer = n/2;
+	    answer *= -1;
+	}
+	
+	cout<<answer<<endl;
+	
+	
+}
