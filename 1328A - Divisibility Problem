@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+	// your code goes here
+	int test;
+	cin >> test;
+	
+	
+	for(int t=0;t<test;t++){
+	    
+	    int a , b;
+	    cin >> a;
+	    cin >> b;
+	    
+	    int res = a%b;
+	    
+	    if(res == 0){
+	        cout<<0<<endl;
+	        continue;
+	    }
+	    int ress = b- res;
+	        cout<<ress<<endl;
+	}
+}
