@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ 
+int main() {
+    int t; // number of test cases
+    cin >> t;
+ 
+    while (t--) {
+        int n;
+        string s;
+        cin >> n >> s;
+ 
+        int originalOnes = 0;
+        for (char c : s) {
+            if (c == '1') originalOnes++;
+        }
+        int totalOnes = (n - 2) * originalOnes + n;
+        cout << totalOnes << endl;
+    }
+ 
+    return 0;
+}
