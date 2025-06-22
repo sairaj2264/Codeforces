@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#include <map>
+#include <set>
+using namespace std;
+ 
+int maxBeautifulSubsequence(vector<int>& a) {
+    map<int, int> freq;
+    for (int x : a) freq[x]++;
+ 
+    int maxSize = 0;
+    int n = a.size();
+ 
+    for (int P = 1; P <= n * n; ++P) {
+        set<int> usedY;
+        int count = 0;
+        for (auto [x, cnt] : freq) {
+            if (P % x != 0) continue;
+            int y = P / x;
+            if (usedY.count(y)) continue;
+            usedY.insert(y);
+            count += cnt;
+        }
+        maxSize = max(maxSize, count);
+    }
+ 
+    return maxSize;
+}
+ 
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int& x : a) cin >> x;
+        cout << maxBeautifulSubsequence(a) << endl;
+    }
+    return 0;
+}
