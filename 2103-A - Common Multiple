@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include <map>
 #include <set>
-using namespace std;
+using namespace std;;
  
 int maxBeautifulSubsequence(vector<int>& a) {
     map<int, int> freq;
